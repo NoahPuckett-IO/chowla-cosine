@@ -1,0 +1,1 @@
+MELT init=buopt_k80_p97_s7.json n=6320 L=55875 mumax=1.0 tau_end=0.05 score=1.3931 dense=1.3931 iters=2882

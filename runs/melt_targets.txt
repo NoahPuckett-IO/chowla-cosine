@@ -1,0 +1,9 @@
+2450 runs/buopt_k50_p59_s7.json 0.6339
+3540 runs/buopt_k60_p67_s7.json 0.6242
+4830 runs/buopt_k70_p79_s7.json 0.6163
+6320 runs/buopt_k80_p97_s7.json 0.6162
+8010 runs/buopt_k90_p103_s7.json 0.6068
+9900 runs/buopt_k100_p127_s3.json 0.6066
+11990 runs/buopt_k110_p127_s3.json 0.5975
+14280 runs/buopt_k120_p151_s1.json 0.5984
+25440 runs/buopt_k160_p197_s1.json 0.5897

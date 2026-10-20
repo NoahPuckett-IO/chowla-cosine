@@ -1,0 +1,6 @@
+cd "/c/Users/noahp/OneDrive/Desktop/Conjectures/Chowla"; export MKL_NUM_THREADS=1
+while tasklist | grep -qi python && powershell -NoProfile -Command "(Get-CimInstance Win32_Process -Filter \"Name like 'python%'\" | ? { \$_.CommandLine -match 'melt.py' }).Count" | grep -qv '^0$'; do sleep 20; done
+for cfg in "40 1500 1" "40 3000 2" "40 6000 3" "40 1500 4" "40 3000 5" "56 3000 6" "56 6000 7"; do set -- $cfg; (timeout 720 python puckett.py $1 $2 600 $3 > runs/puck_$3.log 2>&1 &); done
+for cfg in "1 1 mix" "2 3 mix" "3 0.5 swap" "4 3 grow" "5 1 swap" "6 6 mix" "7 0.3 mix" "8 2 grow"; do set -- $cfg; (timeout 900 python shape.py 1560 600 $1 $2 $3 > runs/shape_$1.log 2>&1 &); done
+ssh mac 'cd ~/math/Chowla; while pgrep -f melt.py >/dev/null; do sleep 20; done; export OPENBLAS_NUM_THREADS=1; P=~/math/venv/bin/python; nohup nice -n 20 $P puckett.py 40 2000 600 11 > runs/puck_11.log 2>&1 & nohup nice -n 20 $P puckett.py 40 4000 600 12 > runs/puck_12.log 2>&1 & nohup nice -n 20 $P puckett.py 48 3000 600 13 > runs/puck_13.log 2>&1 & nohup nice -n 20 $P shape.py 1560 600 21 1 mix > runs/shape_21.log 2>&1 & nohup nice -n 20 $P shape.py 1560 600 22 3 swap > runs/shape_22.log 2>&1 & nohup nice -n 20 $P shape.py 1560 600 23 1 grow > runs/shape_23.log 2>&1 &'
+echo queued

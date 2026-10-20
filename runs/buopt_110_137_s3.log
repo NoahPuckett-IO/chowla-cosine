@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\bu_opt.py", line 51, in <module>
+    run(k, p, sec, seed)
+    ~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\bu_opt.py", line 25, in run
+    R = np.empty((p, len(x)), np.float32); Gm = np.empty((p, len(x)), np.float32)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 548. MiB for an array with shape (137, 1048577) and data type float32

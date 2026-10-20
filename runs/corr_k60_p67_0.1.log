@@ -1,0 +1,18 @@
+LP round 0: t=-10.66 grid-min=-65.81 frac-score=1.0546 (3354s)
+Traceback (most recent call last):
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\correct.py", line 70, in <module>
+    main(sys.argv[1], float(sys.argv[2]), float(sys.argv[3]), int(sys.argv[4]))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\correct.py", line 25, in main
+    res = linprog(np.r_[np.zeros(nv), -1.0], A_ub=A_ub, b_ub=b_ub,
+                  A_eq=np.r_[np.ones(nv), 0.0][None, :], b_eq=[m],
+                  bounds=[(0, 1)] * nv + [(None, None)], method="highs")
+  File "C:\Users\noahp\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize\_linprog.py", line 660, in linprog
+    sol = _linprog_highs(lp, solver=highs_solvers[meth],
+                         **solver_options)
+  File "C:\Users\noahp\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize\_linprog_highs.py", line 355, in _linprog_highs
+    res = _highs_wrapper(c, A.indptr, A.indices, A.data, lhs, rhs,
+                         lb, ub, integrality.astype(np.uint8), options)
+  File "C:\Users\noahp\AppData\Local\Programs\Python\Python313\Lib\site-packages\scipy\optimize\_highspy\_highs_wrapper.py", line 206, in _highs_wrapper
+    run_status = highs.run()
+MemoryError: std::bad_alloc

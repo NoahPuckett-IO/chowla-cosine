@@ -1,0 +1,1 @@
+MELT init=buopt_k50_p59_s7.json n=2450 L=20535 mumax=1.0 tau_end=0.08 score=1.0361 dense=1.0361 iters=4740

@@ -1,0 +1,4 @@
+cd "/c/Users/noahp/OneDrive/Desktop/Conjectures/Chowla"; export MKL_NUM_THREADS=1
+sleep 60; while [ "$(powershell -NoProfile -Command "(Get-CimInstance Win32_Process -Filter \"Name like 'python%'\" | ? { \$_.CommandLine -match 'melt.py|puckett.py|shape.py' }).Count")" != "0" ]; do sleep 20; done
+for nm in "8 24" "10 30" "12 36" "16 48" "20 60" "24 72" "32 96" "40 120" "48 144" "64 192" "80 240" "100 300" "128 384" "160 480" "200 600"; do set -- $nm; (timeout 720 python smallsets.py $1 $2 600 1 > runs/small_$1.log 2>&1 &); done
+ssh mac 'cd ~/math/Chowla; sleep 30; while pgrep -f "puckett.py|shape.py" >/dev/null; do sleep 20; done; export OPENBLAS_NUM_THREADS=1; P=~/math/venv/bin/python; for nm in "14 42" "18 54" "28 84" "36 108" "56 168" "72 216"; do set -- ${=nm}; nohup nice -n 20 $P smallsets.py $1 $2 600 2 > runs/small_$1.log 2>&1 & done'

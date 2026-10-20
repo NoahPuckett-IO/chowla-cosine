@@ -1,0 +1,1 @@
+MELT init=buopt_k90_p103_s7.json n=8010 L=62430 mumax=0.9 tau_end=0.07 score=1.3430 dense=1.3430 iters=2165

@@ -1,0 +1,1 @@
+MELT init=melt_n1560_L12690_s65.json n=1560 L=5010 mumax=0.5 tau_end=0.1 score=0.6467 dense=0.6467 iters=31483

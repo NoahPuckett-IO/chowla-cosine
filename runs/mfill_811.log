@@ -1,0 +1,1 @@
+MELT init=buopt_k100_p127_s3.json n=9900 L=95250 mumax=1.0 tau_end=0.08 score=1.3835 dense=1.3835 iters=1145

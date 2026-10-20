@@ -1,0 +1,5 @@
+LP round 0: t=-17.19 grid-min=-37.68 frac-score=0.9400 (1052s)
+LP round 1: t=-18.87 grid-min=-23.31 frac-score=0.5815 (5881s)
+LP round 2: t=-19.21 grid-min=-22.78 frac-score=0.5682 (9963s)
+LP round 3: t=-19.41 grid-min=-22.48 frac-score=0.5608 (15517s)
+CORR buopt_k40_p47_s1 mfrac=0.03 n0=1560 n=1607 score=0.8232 dense=0.8232

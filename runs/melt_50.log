@@ -1,0 +1,1 @@
+MELT init=buopt_k40_p47_s7.json n=1560 L=12690 mumax=10.0 tau_end=0.1 score=1.8191 dense=1.8191 iters=7406

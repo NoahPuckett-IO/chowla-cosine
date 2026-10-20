@@ -1,0 +1,1 @@
+MELT init=buopt_k160_p197_s1.json n=25440 L=231374 mumax=1.0 tau_end=0.08 score=5.1542 dense=5.1542 iters=384

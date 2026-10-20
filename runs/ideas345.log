@@ -1,0 +1,18 @@
+IDEA baseline-bu n=1560 score=0.6426
+IDEA 3-cluster+1 n=2835 score=3.3321
+IDEA 3-cluster+2 n=2866 score=3.3701
+IDEA 3-cluster+5 n=2849 score=3.1031
+IDEA 3-cluster+0,1,2 n=3895 score=2.2823
+Traceback (most recent call last):
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\ideas345.py", line 18, in <module>
+    log(f"4-union-dilate L={L}", A + [L * a for a in A])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\ideas345.py", line 7, in log
+    A = sorted(set(int(a) for a in A if a > 0)); line = f"IDEA {name} n={len(A)} score={c.score(A):.4f}"
+                                                                                        ~~~~~~~^^^
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\chowla.py", line 30, in score
+    return -fmin(A) / math.sqrt(len(A))
+            ~~~~^^^
+  File "C:\Users\noahp\OneDrive\Desktop\Conjectures\Chowla\chowla.py", line 15, in fmin
+    c = np.zeros(M); c[A] = 1.0
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 16.0 GiB for an array with shape (2147483648,) and data type float64

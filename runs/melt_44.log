@@ -1,0 +1,1 @@
+MELT init=fejer n=1560 L=12000 mumax=3.0 tau_end=0.3 score=1.5912 dense=1.5912 iters=7490
